@@ -37,9 +37,6 @@ public class UserControllerImpl {
 
     @PostMapping()
     public String addUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
-        System.out.println("papa");
-
-        System.out.println("do");
         userService.addUser(user);
         return "redirect:/users";
     }
